@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="todo" alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rosolen.UI.LancamentosController">
+    <children>
+        <AnchorPane>
+            <children>
+                <VBox alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <AnchorPane>
+                            <children>
+                                <Label layoutX="14.0" layoutY="2.0" text="Código:" />
+                                <TextField fx:id="txt_cod" disable="true" editable="false" layoutX="14.0" layoutY="19.0" prefHeight="25.0" prefWidth="42.0" />
+                                <Label layoutX="69.0" layoutY="2.0" text="Nome:" />
+                                <TextField fx:id="txt_nome" editable="false" layoutX="69.0" layoutY="19.0" prefHeight="25.0" prefWidth="254.0" />
+                                <Label layoutX="14.0" layoutY="50.0" text="CPF:" />
+                                <TextField fx:id="txt_CPF" editable="false" layoutX="14.0" layoutY="67.0" prefHeight="25.0" prefWidth="89.0" />
+                                <Label layoutX="113.0" layoutY="50.0" text="Telefone:" />
+                                <TextField fx:id="txt_telefone" editable="false" layoutX="113.0" layoutY="67.0" prefHeight="25.0" prefWidth="113.0" />
+                                <Label layoutX="237.0" layoutY="50.0" text="Situação:" />
+                                <TextField fx:id="txt_situacao" editable="false" layoutX="236.0" layoutY="67.0" prefHeight="25.0" prefWidth="87.0" />
+                                <Label layoutX="14.0" layoutY="99.0" text="\@Email:" />
+                                <TextField fx:id="txt_email" editable="false" layoutX="14.0" layoutY="116.0" prefHeight="25.0" prefWidth="190.0" />
+                                <Label layoutX="214.0" layoutY="99.0" text="Credito:" />
+                                <TextField fx:id="txt_credito" disable="true" editable="false" layoutX="213.0" layoutY="116.0" prefHeight="25.0" prefWidth="110.0" />
+                                <ImageView fx:id="fotoPessoa" fitHeight="125.0" fitWidth="125.0" layoutX="350.0" layoutY="17.0" pickOnBounds="true" />
+                            </children>
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                        </AnchorPane>
+                        <Separator />
+                        <BorderPane fx:id="pn_procura">
+                            <center>
+                                <HBox fx:id="hb_procurar" alignment="CENTER" spacing="20.0">
+                                    <children>
+                                        <TextField fx:id="txt_procurarPessoa" prefWidth="304.0" />
+                                        <Button mnemonicParsing="false" onAction="#evt_procurarPessoa" prefHeight="35.0" prefWidth="78.0" text="Procurar" />
+                                    </children>
+                                </HBox>
+                            </center>
+                            <bottom>
+                                <TableView fx:id="tabelaPessoa" maxHeight="325.0" onMouseClicked="#evt_selecionarPessoa" prefHeight="275.0" prefWidth="491.0" BorderPane.alignment="CENTER">
+                                    <BorderPane.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </BorderPane.margin>
+                                    <columns>
+                                        <TableColumn fx:id="col_cod" maxWidth="310.0" minWidth="-1.0" prefWidth="47.0" text="Código" />
+                                        <TableColumn fx:id="col_nome" maxWidth="310.0" minWidth="-1.0" prefWidth="128.0" text="Nome" />
+                                        <TableColumn fx:id="col_cpf" maxWidth="494.0" minWidth="-1.0" prefWidth="100.0" text="CPF" />
+                                        <TableColumn fx:id="col_telefone" maxWidth="347.0" minWidth="-1.0" prefWidth="84.0" text="Telefone" />
+                                        <TableColumn fx:id="col_email" maxWidth="473.0" minWidth="-1.0" prefWidth="130.0" text="Email" />
+                                    </columns>
+                                </TableView>
+                            </bottom>
+                        </BorderPane>
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </AnchorPane>
+        <Separator orientation="VERTICAL" />
+        <AnchorPane fx:id="pn_dados1">
+            <children>
+                <VBox alignment="CENTER" layoutX="10.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <AnchorPane prefHeight="291.0" prefWidth="373.0">
+                            <children>
+                                <CheckBox fx:id="chk_avaliacao" layoutX="8.0" layoutY="9.0" mnemonicParsing="false" text="Avaliação" />
+                                <RadioButton fx:id="rb_AvNormal" disable="true" layoutX="13.0" layoutY="29.0" mnemonicParsing="false" selected="true" text="Normal">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="grupoAvaliacao" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="rb_AvReavaliacao" disable="true" layoutX="13.0" layoutY="47.0" mnemonicParsing="false" text="Reavaliação" toggleGroup="$grupoAvaliacao" />
+                                <Label layoutX="14.0" layoutY="71.0" text="Ultima Avaliação:" />
+                                <DatePicker fx:id="dp_UltimaAval" editable="false" layoutX="13.0" layoutY="90.0" prefHeight="25.0" prefWidth="150.0" />
+                                <Label fx:id="lb_data1" layoutX="14.0" layoutY="117.0" text="Avaliação:" />
+                                <DatePicker fx:id="dp_AvaliacaoPagar" disable="true" layoutX="13.0" layoutY="134.0" prefHeight="25.0" prefWidth="150.0" />
+                                <Separator layoutX="177.0" orientation="VERTICAL" prefHeight="232.0" prefWidth="6.0" AnchorPane.bottomAnchor="101.0" AnchorPane.topAnchor="-5.0" />
+                                <CheckBox fx:id="chk_mensalidade" layoutX="194.0" layoutY="9.0" mnemonicParsing="false" text="Mensalidade" />
+                                <RadioButton fx:id="rb_mensalidadeNormal" disable="true" layoutX="199.0" layoutY="29.0" mnemonicParsing="false" selected="true" text="Normal">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="grupoMensalidade" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="rb_mensalidadeFamiliar" disable="true" layoutX="199.0" layoutY="46.0" mnemonicParsing="false" text="Familiar" toggleGroup="$grupoMensalidade" />
+                                <Label layoutX="200.0" layoutY="69.0" text="Pacote:" />
+                                <Label layoutX="201.0" layoutY="129.0" text="Ultima mensalidade paga:" />
+                                <DatePicker fx:id="dp_UltimaMens" editable="false" layoutX="200.0" layoutY="146.0" prefHeight="25.0" prefWidth="150.0" />
+                                <Label layoutX="201.0" layoutY="175.0" text="Mensalidade a pagar:" />
+                                <DatePicker fx:id="dp_MensalidadePagar" disable="true" layoutX="200.0" layoutY="192.0" prefHeight="25.0" prefWidth="150.0" />
+                                <Button fx:id="bt_familia" layoutX="65.0" layoutY="181.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" />
+                                <CheckBox fx:id="chk_desconto" layoutX="13.0" layoutY="261.0" mnemonicParsing="false" text="Desconto?" />
+                                <Label fx:id="lb_desconto" layoutX="93.0" layoutY="261.0" />
+                                <RadioButton fx:id="rb_descontoReais" disable="true" layoutX="68.0" layoutY="286.0" mnemonicParsing="false" selected="true" text="R$">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="grupoDesconto" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="rb_descontoPorcentagem" disable="true" layoutX="106.0" layoutY="286.0" mnemonicParsing="false" text="\%" toggleGroup="$grupoDesconto" />
+                                <TextField fx:id="txt_desconto" disable="true" layoutX="13.0" layoutY="282.0" prefHeight="25.0" prefWidth="50.0" />
+                                <Label layoutX="201.0" layoutY="262.0" text="Utilizar Credito?" />
+                                <RadioButton fx:id="rb_creditoNao" layoutX="201.0" layoutY="286.0" mnemonicParsing="false" selected="true" text="Nao">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="grupoCredito" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="rb_creditoSim" layoutX="249.0" layoutY="286.0" mnemonicParsing="false" text="Sim" toggleGroup="$grupoCredito" />
+                                <Label layoutX="15.0" layoutY="318.0" text="Pagamento:" />
+                                <TextField fx:id="txt_pagamento" layoutX="83.0" layoutY="314.0" prefHeight="25.0" prefWidth="102.0" />
+                                <Label layoutX="191.0" layoutY="318.0" text="R$" />
+                                <Separator layoutX="80.0" layoutY="248.0" prefHeight="3.0" prefWidth="363.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                <Separator layoutX="5.0" layoutY="167.0" prefWidth="170.0" />
+                                <ComboBox fx:id="cb_pacote" disable="true" layoutX="200.0" layoutY="90.0" prefHeight="25.0" prefWidth="150.0" />
+                            </children>
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                        </AnchorPane>
+                        <Separator />
+                        <AnchorPane>
+                            <children>
+                                <Label layoutX="4.0" text="Total:">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="lb_total" layoutX="66.0" layoutY="4.0" text="0.0">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="7.0" layoutY="35.0" text="CPF na nota?" />
+                                <RadioButton fx:id="rb_notaSim" disable="true" layoutX="7.0" layoutY="52.0" mnemonicParsing="false" selected="true" text="Sim">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="grupoCpfNota" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="rb_notaNao" disable="true" layoutX="51.0" layoutY="52.0" mnemonicParsing="false" text="Nao" toggleGroup="$grupoCpfNota" />
+                                <Label layoutX="129.0" text="Troco:">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="lb_troco" layoutX="197.0" layoutY="4.0" text="0.0">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="134.0" layoutY="35.0" text="Troco em crédito?" />
+                                <RadioButton fx:id="rb_trococreditoNao" layoutX="134.0" layoutY="52.0" mnemonicParsing="false" selected="true" text="Nao">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="grupoTrocoCredito" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="rb_trococreditoSim" layoutX="182.0" layoutY="52.0" mnemonicParsing="false" text="Sim" toggleGroup="$grupoTrocoCredito" />
+                                <Button fx:id="btn_registrarlancamento" layoutX="54.0" layoutY="82.0" mnemonicParsing="false" onAction="#evt_registrarLancamento" prefHeight="48.0" prefWidth="284.0" style="-fx-border-color: black; -fx-border-radius: 2; -fx-border-width: 2;" text="Registrar Lancamento">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                                <Label layoutX="246.0" layoutY="1.0" text="Dívida:">
+                                    <font>
+                                        <Font size="23.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="lb_divida" layoutX="318.0" layoutY="4.0" text="0.0">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </AnchorPane>
+    </children>
+</HBox>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rosolen.UI.AlunosController">
+    <tabs>
+        <Tab text="Situação">
+            <content>
+                <AnchorPane fx:id="pn_situacao" />
+            </content>
+        </Tab>
+        <Tab text="Aniversariante">
+            <content>
+                <AnchorPane fx:id="pn_anivesariantes" />
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Rosolen.jnlp">
+  <information>
+    <title>Rosolen</title>
+    <vendor>thale</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Rosolen.jar" size="254773" download="eager" />
+    <jar href="lib\bridj-0.7.0.jar" size="935929" download="eager" />
+    <jar href="lib\jasperreports-6.6.0.jar" size="5534555" download="eager" />
+    <jar href="lib\json.jar" size="95484" download="eager" />
+    <jar href="lib\jsoup-1.13.1.jar" size="393867" download="eager" />
+    <jar href="lib\postgresql-9.4.1209.jar" size="678049" download="eager" />
+    <jar href="lib\slf4j-api-1.7.2.jar" size="26083" download="eager" />
+    <jar href="lib\webcam-capture-0.3.12.jar" size="428314" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Rosolen" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="rosolen.Rosolen"  name="Rosolen" />
+  <update check="always"/>
+</jnlp>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Todo" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rosolen.UI.LoginController">
+    <children>
+        <AnchorPane id="AnchorPane" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fx:id="iv_logo" fitHeight="58.0" fitWidth="398.0" opacity="0.15" pickOnBounds="true" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <image>
+                        <Image url="@../imagens/logo1.png" />
+                    </image>
+                    <effect>
+                        <Reflection fraction="0.48" topOpacity="1.0" />
+                    </effect>
+                </ImageView>
+                <Label layoutX="18.0" layoutY="62.0" text="Usuario:" textFill="WHITE">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="26.0" layoutY="97.0" prefHeight="25.0" prefWidth="70.0" text="Senha:" textFill="WHITE">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Separator layoutY="58.0" prefHeight="5.0" prefWidth="386.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <TextField fx:id="tb_usuario" layoutX="114.0" layoutY="69.0" prefHeight="25.0" prefWidth="201.0" />
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="3.0" prefHeight="58.0" prefWidth="353.0" text="Controle de Acesso" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Times New Roman" size="45.0" />
+                    </font>
+                </Label>
+                <PasswordField fx:id="pf_senha" layoutX="114.0" layoutY="102.0" prefHeight="25.0" prefWidth="201.0" />
+                <Button fx:id="btEntrar" layoutX="324.0" layoutY="72.0" mnemonicParsing="false" onAction="#Entrar" prefHeight="50.0" prefWidth="50.0" text="Entrar" />
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </AnchorPane>
+    </children>
+</AnchorPane>

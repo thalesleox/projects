@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <title>Jornal</title>
+        <style type="text/css">
+            * {
+                box-sizing: border-box;
+                margin: 0 auto;
+                font-family: Arial, Verdana;
+            }
+
+
+            .corpo {
+                padding: 20px;
+                background-image: url("https://i.imgur.com/WFtOVg7.jpg");
+            }
+
+            .cabecalho {
+                padding: 20px;
+                font-size: 30px;
+                text-align: center;
+                background-color: rgba(255,255,255,0.95);
+            }
+
+            .row{
+                text-align: justify
+            }
+            /* Ajusta o fundo com o conteudo */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            
+            /* Duas divisões */
+            /* Coluna esquerda */
+            .colunaesquerda {   
+                float: left;
+                width: 75%;
+            }
+
+            /* Coluna Direita */
+            .colunadireita {
+                float: left;
+                width: 25%;
+                padding-left: 20px;
+            }
+
+            /* Imagem */
+            .imagem {
+                background-color: #e1e1e1;
+                text-align: center;
+                width: 100%;
+                padding: 20px;
+            }
+
+            img{
+                max-width:100%;
+                max-height:100%;
+            }
+
+            /* Efeito de "jornal" */
+            .jornal {
+                background-color: white;
+                background-color: rgba(255,255,255,0.95);
+                padding:20px;
+                margin-top: 20px;
+            }
+
+            /* rodape */
+            .rodape {
+                padding: 20px;
+                text-align: center;
+                background: #ddd;
+                margin-top: 20px;
+            }
+
+            /* Layout responsivo */
+            @media screen and (max-width: 800px) {
+                .colunaesquerda, .colunadireita {   
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+        </style>
+    </head>
+
+
+    <body class="corpo">
+
+        <header class="cabecalho">
+            <p>Web Design</p>
+        </header>
+
+        <div class="row">
+            <article class="colunaesquerda">
+                <section class="jornal">
+                    <h2>Katie Bouman: quem é a cientista por trás da 1ª imagem de um buraco negro?</h2>
+                    <h6>Katie Bouman,13 de Abril, 2019</h6>
+                        <div class="imagem" ><img src="https://i.imgur.com/MttphlH.jpg" alt="Katie"> </div>
+                    <p>Exemplo:</p>
+                    <p style="text-indent:4em">
+                        Após a repercussão do resultado final do projeto, Katie compartilhou uma foto em seu Facebook com a legenda: 
+                        “Observando, incrédula, a primeira imagem que eu já fiz de um buraco negro que estava em processo de reconstrução”.
+                    </p>
+                    <p style="text-indent:4em">
+                        Mas, embora tenha tido um papel essencial e indispensável na liderança do marco, ela não quer que o crédito da conquista fique todo para ela. 
+                        “Foi preciso o incrível talento de uma equipe de cientistas de todo o mundo e anos de trabalho duro para desenvolver o instrumento, o processamento 
+                        de dados, os métodos de imagem e as técnicas de análise necessárias para realizar essa façanha aparentemente impossível”, escreveu na rede social.
+                    </p>
+                    <p>Deseja saber mais? Acesse: <a href="https://www.youtube.com/watch?v=uCOPLUWGWJk" target="_blank">Primeira imagem real de um buraco negro!</a></p>
+                    <a></a>
+                </section>
+                <section class="jornal">
+                    <h2>TITULO</h2>
+                    <h6>Descrição do titulo, 28 de Março, 2019</h6>
+                    <div class="imagem" ><img src="#" alt="Imagem2"> </div>
+                    <p>Texto 1</p>
+                    <p>Texto 2</p>
+                </section>
+            </article>
+            <aside class="colunadireita">
+                <div class="jornal">
+                    <h2>Sobre nós</h2>
+                    <div class="imagem" ><img src="https://www.cps.sp.gov.br/wp-content/uploads/sites/1/2019/03/grafite-sp-criativo-580x420.jpg" alt="SPCriativo"></div>
+                    <p style="text-indent:1em">
+                        O São Paulo Criativo é um programa de qualificação profissional inovador, voltado aos jovens que buscam desenvolver conhecimentos 
+                        e habilidades necessários para atuação em setores da economia criativa.
+                    </p>
+                </div>
+                <div class="jornal">
+                    <h3>Outras postagems</h3>
+                    <div class="imagem">
+                        <a href="https://g1.globo.com/loterias/noticia/2019/04/13/mega-sena-pode-pagar-r-45-milhoes-neste-sabado1.ghtml" target="_blank">
+                            <img src="https://i.imgur.com/mrmcZhh.jpg" 
+                                 alt="Mega Sena">
+                            <p>
+                                Sorteio de hoje da Mega-Sena pode pagar prêmio de R$ 45 milhões
+                            </p>
+                        </a> 
+                    </div>
+                    <br>                        
+                    <div class="imagem">
+                        <a href="#">
+                            <img src="#" 
+                                 alt="Postagem 2">
+                            <p>
+                                Postagem 2
+                            </p>
+                        </a> 
+                    </div>
+                    <br>
+                    <div class="imagem">
+                        <a href="#">
+                            <img src="#" 
+                                 alt="Postagem 3">
+                            <p>
+                                Postagem 3
+                            </p>
+                        </a> 
+                    </div>
+                </div>
+                <div class="jornal">
+                    <h3>Redes Sociais:</h3>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/facebook_circle-512.png" 
+                             alt="Facebook" width="32">
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="http://www.stickpng.com/assets/images/58e9196deb97430e819064f6.png" 
+                             alt="Twitter" width="32">
+                    </a>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="rodape">
+            <h2>Rodapé</h2>
+        </footer>
+    </body>
+</html>

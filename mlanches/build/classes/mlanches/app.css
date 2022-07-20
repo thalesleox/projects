@@ -1,0 +1,66 @@
+.root{
+    -fx-base: white;
+}
+/*
+*{
+    -fx-text-fill: white;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-opacity: 0.4;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 3px;
+    -fx-border-color: transparent transparent white transparent;
+}
+
+.text-field:hover{
+    -fx-opacity: 0.6;
+    -fx-border-color: white white white white;
+}
+
+.text-field:focused {    
+    -fx-opacity: 1;
+    -fx-border-color: white white white white;
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-background-color: black;
+    -fx-border-color: white;
+    -fx-border-insets: -1px;
+    -fx-border-radius: 3px;
+}
+
+.table-row-cell{
+    -fx-background-color: white, #222222;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: white, #333333;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; 
+}
+
+.table-row-cell:selected {
+    -fx-background-color: white,black;
+    -fx-background-insets: 1;
+    -fx-background-radius:   1;
+    -fx-font-weight: bold;
+}
+
+.combo-box .list-cell 
+{
+    -fx-background-color: black;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover 
+{
+    -fx-background-color: white;
+    -fx-text-fill: -fx-text-inner-color;
+}*/

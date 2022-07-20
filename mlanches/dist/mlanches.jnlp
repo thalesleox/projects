@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="mlanches.jnlp">
+  <information>
+    <title>mlanches</title>
+    <vendor>thale</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\bridj-0.7.0.jar" size="935929" download="eager" />
+    <jar href="lib\commons-beanutils-1.8.0.jar" size="231320" download="eager" />
+    <jar href="lib\commons-collections-3.2.1.jar" size="575389" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib\commons-javaflow-20060411.jar" size="96529" download="eager" />
+    <jar href="lib\commons-logging-1.1.1.jar" size="60686" download="eager" />
+    <jar href="lib\groovy-all-2.0.1.jar" size="6191960" download="eager" />
+    <jar href="lib\itext-2.1.7.js2.jar" size="1130575" download="eager" />
+    <jar href="lib\jcommon-1.0.15.jar" size="309294" download="eager" />
+    <jar href="lib\jfreechart-1.0.12.jar" size="1368681" download="eager" />
+    <jar href="lib\json.jar" size="95484" download="eager" />
+    <jar href="lib\jsoup-1.13.1-javadoc.jar" size="1135616" download="eager" />
+    <jar href="lib\jsoup-1.13.1.jar" size="393867" download="eager" />
+    <jar href="lib\org-netbeans-core.jar" size="532106" download="eager" />
+    <jar href="lib\postgresql-9.4.1209.jar" size="678049" download="eager" />
+    <jar href="mlanches.jar" size="2375322" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="mlanches" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="mlanches.Mlanches"  name="mlanches" />
+  <update check="always"/>
+</jnlp>

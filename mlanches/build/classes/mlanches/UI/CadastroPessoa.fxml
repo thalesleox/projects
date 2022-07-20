@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox fx:id="todo" alignment="CENTER" spacing="5.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mlanches.UI.CadastroPessoaController">
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+    <children>
+        <VBox spacing="5.0">
+            <children>
+                <HBox fx:id="hb_botoes" alignment="CENTER" spacing="5.0">
+                    <children>
+                        <Button fx:id="bt_novo" minWidth="70.0" mnemonicParsing="false" onAction="#evt_novo" prefHeight="35.0" prefWidth="76.0" text="Novo" />
+                        <Button fx:id="bt_alterar" minWidth="70.0" mnemonicParsing="false" onAction="#evt_alterar" prefHeight="35.0" prefWidth="76.0" text="Alterar" />
+                        <Button fx:id="bt_apagar" minWidth="70.0" mnemonicParsing="false" onAction="#evt_apagar" prefHeight="35.0" prefWidth="76.0" text="Apagar" />
+                        <Button fx:id="bt_verificar" minWidth="70.0" mnemonicParsing="false" onAction="#evt_verificar" prefHeight="35.0" prefWidth="76.0" text="Verificar" />
+                        <Button fx:id="bt_confirmar" minWidth="70.0" mnemonicParsing="false" onAction="#evt_confirmar" prefHeight="35.0" prefWidth="76.0" text="Confirmar" />
+                        <Button fx:id="bt_cancelar" minWidth="70.0" mnemonicParsing="false" onAction="#evt_cancelar" prefHeight="35.0" prefWidth="76.0" text="Cancelar" />
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </VBox.margin>
+                </HBox>
+                <Separator prefWidth="200.0" />
+                <AnchorPane fx:id="pn_dados" disable="true">
+                    <children>
+                        <Label layoutX="30.0" layoutY="6.0" text="Nome: *" />
+                        <TextField fx:id="txt_nome" layoutX="89.0" layoutY="2.0" prefHeight="25.0" prefWidth="336.0" />
+                        <Label layoutX="22.0" layoutY="39.0" text="Endereço: *" />
+                        <TextField fx:id="txt_endereco" layoutX="89.0" layoutY="35.0" prefHeight="25.0" prefWidth="336.0" />
+                        <Label layoutX="26.0" layoutY="70.0" text="Telefone: *" />
+                        <TextField fx:id="txt_telefone" layoutX="89.0" layoutY="66.0" prefHeight="25.0" prefWidth="132.0" />
+                        <ComboBox fx:id="cb_cargo" disable="true" layoutX="275.0" layoutY="66.0" prefWidth="150.0" />
+                        <Label layoutX="229.0" layoutY="70.0" text="Cargo: *" />
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </VBox.margin>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </AnchorPane>
+                <Separator prefWidth="200.0" />
+                <VBox fx:id="pn_procura" alignment="CENTER" disable="true" spacing="5.0">
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </VBox.margin>
+                    <children>
+                        <HBox alignment="CENTER" spacing="10.0">
+                            <children>
+                                <Label contentDisplay="CENTER" text="Procurar:" />
+                                <TextField fx:id="txt_procura" prefHeight="25.0" prefWidth="220.0" />
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <TableView fx:id="tabela" onMouseClicked="#evt_click" prefHeight="200.0" prefWidth="200.0">
+                            <columns>
+                                <TableColumn fx:id="col_nome" prefWidth="106.0" text="Nome" />
+                                <TableColumn fx:id="col_endereco" prefWidth="199.0" text="Endereço" />
+                                <TableColumn fx:id="col_telefone" prefWidth="102.0" text="Telefone" />
+                                <TableColumn fx:id="col_cargo" prefWidth="73.0" text="Cargo" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+            </children>
+            <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </HBox.margin>
+        </VBox>
+    </children>
+</HBox>

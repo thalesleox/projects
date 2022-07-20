@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="todo" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rosolen.UI.ValoresController">
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" text="Avaliação:" />
+        <TextField fx:id="txt_avaliacao" layoutX="84.0" layoutY="10.0" prefHeight="25.0" prefWidth="65.0" />
+        <Label layoutX="14.0" layoutY="47.0" text="Reavaliação:" />
+        <TextField fx:id="txt_reavaliacao" layoutX="84.0" layoutY="43.0" prefHeight="25.0" prefWidth="65.0" />
+        <Label layoutX="14.0" layoutY="80.0" text="Mensalidade Normal:" />
+        <TextField fx:id="txt_mensNormal" layoutX="141.0" layoutY="76.0" prefHeight="25.0" prefWidth="65.0" />
+        <Label layoutX="14.0" layoutY="112.0" text="Mensalidade Familiar:" />
+        <TextField fx:id="txt_mensFamiliar" layoutX="141.0" layoutY="108.0" prefHeight="25.0" prefWidth="65.0" />
+        <Button layoutX="147.0" layoutY="147.0" mnemonicParsing="false" onAction="#evt_confirmar" text="Confirmar" />
+    </children>
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+</AnchorPane>

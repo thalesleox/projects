@@ -1,0 +1,53 @@
+.root{
+    -fx-base: black;
+}
+
+*{
+    -fx-text-fill: orange;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-opacity: 0.2;
+    -fx-border-width: 3px;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent transparent orange transparent;
+}
+
+.text-field:focused {    
+    -fx-opacity: 1;
+}
+
+.text-field:hover{
+    -fx-opacity: 1;
+}
+
+.button {
+    -fx-text-fill: orange;
+    -fx-background-color: black;
+    -fx-border-color: orange;
+    -fx-border-insets: -1px;
+    -fx-border-radius: 3px;
+}
+
+.table-row-cell{
+    -fx-background-color: orange, #222222;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+    -fx-background-color: orange, #333333;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */  
+}
+
+.table-row-cell:selected {
+    -fx-background-color: orange,black;
+    -fx-background-insets: 1;
+    -fx-background-radius:   1;
+    -fx-font-weight: bold;
+}
